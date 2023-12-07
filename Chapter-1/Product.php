@@ -4,17 +4,17 @@ declare(strict_types=1);
 class Product
 {
     public string $name = "Product 1";
-    public int $price = 100;
+    public int $price;
+
+    // get price
+    public function getPriceAsCurrency(){
+        return $this->price / 100; // divide by 100
+    }
 }
 
 // initialize object
 $p1 = new Product();
-
-// access properties
-print $p1->name . "\n";
-print $p1->price . "\n";
-
-// change properties
-$p1->price = 200;
-// access properties
-print $p1->price . "\n";
+// set property
+$p1->price = 500;
+// print property
+print($p1->getPriceAsCurrency(). PHP_EOL);
