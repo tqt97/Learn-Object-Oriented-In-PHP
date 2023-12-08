@@ -3,8 +3,14 @@
 declare(strict_types=1);
 class Product
 {
-    public string $name = "Product 1";
+    public string $name;
     public int $price;
+
+    public function __construct(int $price = 50, string $name = "Iphone",)
+    {
+        $this->name = $name;
+        $this->price = $price;
+    }
 
     // get price
     public function getPriceAsCurrency(int $divisor = 100, string $currencySymbol = "$")
@@ -15,8 +21,9 @@ class Product
 }
 
 // initialize object
-$p1 = new Product();
-// set property
-$p1->price = 500;
+$p1 = new Product(price: 1000);
+
 // print property
+print($p1->name . PHP_EOL);
+print($p1->price . PHP_EOL);
 print($p1->getPriceAsCurrency(currencySymbol: '£') . PHP_EOL);
