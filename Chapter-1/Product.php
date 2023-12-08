@@ -3,10 +3,7 @@
 declare(strict_types=1);
 class Product
 {
-    public string $name;
-    public int $price;
-
-    public function __construct(int $price = 50, string $name = "Iphone",)
+    public function __construct(public int $price = 50, public string $name = "Iphone")
     {
         $this->name = $name;
         $this->price = $price;
