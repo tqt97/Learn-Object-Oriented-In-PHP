@@ -10,7 +10,7 @@ class Product
     }
 
     // get price
-    public function getPriceAsCurrency(int $divisor = 100, string $currencySymbol = "$")
+    public function getPriceAsCurrency(int $divisor = 100, string $currencySymbol = "$"): string
     {
         $price = $this->price / $divisor; // divide by 100
         return $currencySymbol . $price;

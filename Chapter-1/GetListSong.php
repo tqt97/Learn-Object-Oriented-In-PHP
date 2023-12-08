@@ -12,3 +12,5 @@ $playlist->addSong(new Song('Song 2', 'Artist 2'));
 foreach ($playlist->songs as $song) {
     echo $song->name . PHP_EOL;
 }
+
+print 'Length: ' . $playlist->getLength() . PHP_EOL;
