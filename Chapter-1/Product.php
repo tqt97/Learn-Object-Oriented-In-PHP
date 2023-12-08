@@ -19,4 +19,4 @@ $p1 = new Product();
 // set property
 $p1->price = 500;
 // print property
-print($p1->getPriceAsCurrency(15, '£') . PHP_EOL);
+print($p1->getPriceAsCurrency(currencySymbol: '£') . PHP_EOL);
