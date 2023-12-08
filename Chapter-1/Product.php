@@ -7,8 +7,10 @@ class Product
     public int $price;
 
     // get price
-    public function getPriceAsCurrency(){
-        return $this->price / 100; // divide by 100
+    public function getPriceAsCurrency(string $currencySymbol = "$")
+    {
+        $price = $this->price / 100; // divide by 100
+        return $currencySymbol . $price;
     }
 }
 
@@ -17,4 +19,4 @@ $p1 = new Product();
 // set property
 $p1->price = 500;
 // print property
-print($p1->getPriceAsCurrency(). PHP_EOL);
+print($p1->getPriceAsCurrency('£') . PHP_EOL);
